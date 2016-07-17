@@ -1,0 +1,265 @@
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: bold;
+  font-style: normal;
+  src: url('../fonts/Montserrat-Bold.ttf') format('truetype');
+}
+
+body{
+	margin:0px;
+	font-size: 14px;
+	font-family: 'Montserrat';
+}	
+
+h1, h2, h3, h4, h5, h6, p{
+	margin: 10px 0px;
+}
+
+h1{ font-size: 3rem; 		}
+h2{ font-size: 2rem; 		}
+h3{ font-size: 1.6rem;	}
+h4{ font-size: 1.3rem; 	}
+h5{ font-size: 1.2rem; 	}
+h6{ font-size: 1.1rem; 	}
+
+input{
+	font-size: 0.9rem;
+	border-radius: 5px;
+	border: none;
+	padding: 7px 10px;
+}
+
+.block{
+	width: calc(100% - 300px);
+	margin: auto;
+}
+
+.button{
+	font-size: 0.8rem;
+	border-radius: 3px;
+	padding: 8px 12px;
+	color: white;
+}
+
+.red{
+	background: #FF4842;
+}
+
+.black{
+	background: black;
+}
+
+.navigation{
+	width: 100%;
+	height: 100px;
+	background-color: #273B47;
+	height: 50px;
+	color: white;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+}
+
+.navigation ul.links{
+	padding: 0px;
+	margin: 0px;
+	width: calc(100% - 300px);
+}
+
+.navigation .user {
+	width: 150px;
+	line-height: 50px;
+	text-align: center;
+}
+
+.navigation ul.links li{
+	list-style-type: none;
+	line-height: 50px;
+	float: right;
+	position: relative;
+}
+
+.navigation ul.links li:nth-child(n+2) a{
+	border-right: 1px white solid; 
+}
+
+.navigation ul.links li.active a::after{
+	content: "";
+	width: 100%;
+	position: absolute;
+	left: 0px;
+	border-top: 5px #7DCD40 solid;
+}
+
+.navigation ul.links li a:hover::after{
+	content: "";
+	width: 100%;
+	position: absolute;
+	left: 0px;
+	border-top: 5px #7DCD40 solid;
+}
+
+.navigation ul.links li a{
+	text-decoration: none;
+	padding: 5px 10px;
+	color: white;
+	line-height: 40px;
+}
+
+
+.pagination{
+	text-align: center;	
+	color: #666666;
+}
+
+.pagination ul li{
+	display: inline-block;
+	padding: 10px;
+}
+
+.pagination ul li:not(.active){
+	background: #EAEAEA;
+	border: 1px #CCCCCC solid;
+}
+
+.pagination ul li a{
+	color: #666666;
+	text-decoration: none;
+}
+/********post main card***********/
+/**********************************/
+
+.post-main-card{
+	padding: 10px 30px;
+	width: 55%;
+	background: rgba(255, 255, 255, 0.85);
+	color: #515151;
+}
+
+.post-main-card h2{
+	margin-bottom: 20px;
+	font-weight: normal;
+}
+
+.post-main-card .data {
+	border-top: 1px solid #ccc;
+	padding: 10px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+.post-main-card .data .author{
+	overflow: hidden;
+	width: 50%;
+}
+
+.post-main-card .data .date{
+	width: 50%;
+	text-align: right;
+	line-height: 35px;
+}
+
+.post-main-card .data .author img{
+	float: left;
+	width: 35px;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+.post-main-card .data .author p{
+	float: left;
+}
+
+/********post index card***********/
+/**********************************/
+
+.post-index-card{
+	color: #515151;
+	padding-bottom: 20px;
+}
+
+.post-index-card img{
+	width: 100%;
+}
+
+.post-index-card h4{
+	margin-top: 0px;
+	margin-bottom: 15px;
+	font-weight: normal;
+}
+
+.post-index-card .data {
+	font-size: 0.75rem;
+	border-top: 1px #ccc solid;
+	padding-top: 15px;
+}
+
+/*******specific styles*********/
+/*******************************/
+
+header{
+	background-color: #EFEFEF;
+}
+
+header .search{
+	padding: 5px;
+  text-align: right;
+}
+
+header .head-content { 
+	display: block;
+	height:400px;
+	position: relative;
+	background-image: url(../images/header.jpg);
+	background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header .head-content .post-main-card{
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+}
+
+.post-index{
+	padding: 40px 10px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+.post-index .post-index-card{
+	width: calc( (100% - 40px) / 3);
+	padding-right: 20px;
+}
+
+.post-index .post-index-card:nth-child(3n){
+	padding-right: 0px;
+}
+
+.post-index .post-index-card .data {
+	overflow: hidden;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+.post-index .post-index-card .data .author{
+	width: 50%;
+}
+
+.post-index .post-index-card .data .date{
+	width: 50%;
+	text-align: right;
+}
+
